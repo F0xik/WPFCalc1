@@ -1,0 +1,48 @@
+﻿<Window x:Class="WPFCalc1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCalc1"
+        mc:Ignorable="d"
+        Title="WPFCalc" Height="500" Width="1100" Background="WhiteSmoke">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+
+        </Grid.RowDefinitions>
+        <TextBox Name ="TextForNumbers"  Grid.Row="0" Grid.Column="1"  Grid.ColumnSpan="3" Background="Aqua" FontSize="30" Padding="20"/>
+        <TextBox Name ="number1" Grid.Row="3" Grid.Column="0" FontSize="30" Padding="20" Background="MistyRose" TextChanged="number1_TextChanged"/>
+        <TextBox Name ="number2" Grid.Row="3" Grid.Column="2" FontSize="30" Padding="20" Background="MistyRose"/>
+        <Button Grid.Row="3" Grid.Column="1" FontSize="48" FontFamily="Comic Sans MS" Click="Button_Click_3" >=</Button>
+        <Button Grid.Row="5" Grid.Column ="0" Grid.ColumnSpan="4" FontSize="48" Click="Button_Click" FontFamily="Comic Sans MS"  >Очистить</Button>
+        <Button Grid.Row="5" Grid.Column="4" FontSize="48" Click="Button_Click_2" FontFamily="Comic Sans MS" >Выход</Button>
+        <ComboBox Name="ComboBox1" Grid.Row="3"  Grid.Column="3">
+            <ComboBoxItem Content="+"/>
+            <ComboBoxItem Content="-"/>
+            <ComboBoxItem Content="*"/>
+            <ComboBoxItem Content="/"/>
+        </ComboBox>
+        <StackPanel Grid.RowSpan="3" Grid.Column="4" HorizontalAlignment="Center"  VerticalAlignment="Center"  >
+            <Image Source ="/images/124468.png"/>
+        </StackPanel>
+        <Label Grid.Row="2" Grid.Column="0" Content="Введите первое число" FontSize="18" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" />
+        <Label Grid.Row="0" Grid.Column="0" Content="Ответ:" FontSize="18" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" />
+        <Label Grid.Row="2" Grid.Column="2" Content="Введите второе число" FontSize="18" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" />
+        <Label Grid.Row="2" Grid.Column="3" Content="Выберите действие" FontSize="18" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" />
+        <Label Grid.Row="3" Grid.Column="4" Content="Foxik" FontSize="50" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" />
+        <Label Grid.Row="4" Grid.Column="4" Content="tanasov0672@mail.ru" FontSize="15" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS"/>
+    </Grid>
+</Window>
